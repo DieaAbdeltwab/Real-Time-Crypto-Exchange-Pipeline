@@ -1,0 +1,12 @@
+        curl -X PUT http://connect:8083/connectors/fiat-exchange-rates/config \
+        -H "Content-Type: application/json" \
+        -d '{
+          "connector.class": "com.github.castorm.kafka.connect.http.HttpSourceConnector",
+          "tasks.max": "1",
+          "kafka.topic": "fiat_exchange_rates",
+          "http.request.url": "https://api.coingecko.com/api/v3/simple/price?ids=usd,eur,egp,sar,aed,kwd,qar,bhd,jod,try,gbp&vs_currencies=usd,eur,egp,sar,aed,kwd,qar,bhd,jod,try,gbp",
+          "http.request.method": "GET",
+          "poll.interval.ms": "10000",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": "false"
+        }'

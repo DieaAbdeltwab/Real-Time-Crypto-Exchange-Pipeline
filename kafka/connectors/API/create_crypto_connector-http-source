@@ -1,0 +1,12 @@
+        curl -X PUT http://connect:8083/connectors/coingecko-http-source/config \
+        -H "Content-Type: application/json" \
+        -d '{
+          "connector.class": "com.github.castorm.kafka.connect.http.HttpSourceConnector",
+          "tasks.max": "1",
+          "kafka.topic": "crypto_prices",
+          "http.request.url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana,ripple,dogecoin,cardano,polkadot,the-open-network,litecoin,shiba-inu,avalanche-2,chainlink,uniswap,stellar&vs_currencies=usd,eur,egp,sar,aed",
+          "http.request.method": "GET",
+          "poll.interval.ms": "10000",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": "false"
+        }'

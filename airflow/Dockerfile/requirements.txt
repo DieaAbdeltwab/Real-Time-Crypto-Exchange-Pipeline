@@ -1,0 +1,14 @@
+pymysql
+pandas
+numpy
+apache-airflow-providers-postgres
+apache-airflow-providers-mysql
+
+sqlalchemy
+boto3
+papermill
+jupyter
+ipykernel
+pyspark
+clickhouse-connect
+
