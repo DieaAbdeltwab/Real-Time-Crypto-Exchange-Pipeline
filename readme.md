@@ -17,7 +17,7 @@ Ingest live crypto and fiat prices from public APIs and stream them through a fu
 > From ingestion to visualization — fully containerized
 
 🔹 **CoinGecko API** 🛰️ →\
-🔹 **Airflow** ⚙️ init for 𝐊𝐚𝐟𝐤𝐚 𝐂𝐨𝐧𝐧𝐞𝐜𝐭 and 𝐅𝐥𝐢𝐧𝐤 at project start →\
+🔹 **Airflow** ⚙️ at project start to set up 𝐊𝐚𝐟𝐤𝐚 𝐂𝐨𝐧𝐧𝐞𝐜𝐭 and run 𝐅𝐥𝐢𝐧𝐤 SQL scripts. →\
 🔹 **Kafka** topics (`crypto_prices`, `fiat_exchange_rates`) 🔄 →\
 🔹 **Flink SQL** 💡 joins & converts data →\
 🔹 **ClickHouse** 🏪 stores results →\
